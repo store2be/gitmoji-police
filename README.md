@@ -1,6 +1,8 @@
 # gitmoji-police
 
-> a GitHub App built with [probot](https://github.com/probot/probot) that 
+> a GitHub App built with [probot](https://github.com/probot/probot) that makes sure that all the commits in your repository have a Gitmoji in them.
+
+See [the Gitmoji homepage](http://gitmoji.carloscuesta.me/) for correct Gitmoji usage.
 
 ## Setup
 
