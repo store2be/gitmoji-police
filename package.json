@@ -10,7 +10,6 @@
     "test": "jest && standard"
   },
   "dependencies": {
-    "axios": "^0.17.0",
     "probot": "^3.0.0"
   },
   "devDependencies": {

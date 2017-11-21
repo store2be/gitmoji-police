@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 const gitmojis = require('./gitmojis').gitmojis
 
 const hasGitmoji = ({ commit }) =>
@@ -13,7 +11,11 @@ const checkForEmojis = async (context) => {
   const owner = payload.repository.owner.login
   const { sha } = payload.pull_request.head
 
-  const response = await axios.get(context.payload.pull_request.commits_url)
+  const response = await github.pullRequests.getCommits({
+    owner,
+    repo,
+    number: payload.pull_request.number,
+  })
 
   const [state, description] = allCommitsHaveGitmojis(response.data)
     ? ['success', 'The Gitmoji Police is satisfied with your commit messages.']
