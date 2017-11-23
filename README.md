@@ -4,7 +4,11 @@
 
 See [the Gitmoji homepage](http://gitmoji.carloscuesta.me/) for correct Gitmoji usage.
 
-## Setup
+## Installation
+
+Visit https://github.com/apps/gitmoji-police and click on **Install**. Voilà!
+
+## Dev setup
 
 ```
 # Install dependencies
