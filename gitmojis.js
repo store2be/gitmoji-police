@@ -162,6 +162,13 @@ module.exports = {
       'name':'arrow-up'
     },
     {
+      'emoji': '📌',
+      'entity': '&#x1F4CC;',
+      'code': ':pushpin:',
+      'description': 'Pinning dependencies to specific versions.',
+      'name': 'pushpin'
+    },
+    {
       'emoji':'👷',
       'entity':'&#x1f477;',
       'code':':construction_worker:',
@@ -175,11 +182,11 @@ module.exports = {
       'name':'chart-with-upwards-trend'
     },
     {
-      'emoji':'🔨',
-      'entity':'&#128736;',
-      'code':':hammer:',
+      'emoji':'♻️',
+      'entity':'&#x2672;',
+      'code':':recycle:',
       'description':'Refactoring code.',
-      'name':'hammer'
+      'name':'recycle'
     },
     {
       'emoji':'➖',
@@ -355,6 +362,13 @@ module.exports = {
       'code': ':children_crossing:',
       'description': 'Improving user experience / usability.',
       'name': 'children-crossing'
+    },
+    {
+      'emoji': '🏗',
+      'entity': '&#1f3d7;',
+      'code': ':building_construction:',
+      'description': 'Making architectural changes.',
+      'name': 'building-construction'
     }
   ]
 }
