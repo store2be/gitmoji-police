@@ -353,7 +353,7 @@ module.exports = {
       'emoji': '👥',
       'entity': '&#128101;',
       'code': ':busts_in_silhouette:',
-      'description': 'Add contributor(s).',
+      'description': 'Adding contributor(s).',
       'name': 'busts-in-silhouette'
     },
     {
@@ -369,7 +369,20 @@ module.exports = {
       'code': ':building_construction:',
       'description': 'Making architectural changes.',
       'name': 'building-construction'
+    },
+    {
+      'emoji': '📱',
+      'entity': '&#128241;' ,
+      'code': ':iphone:',
+      'description': 'Working on responsive design.',
+      'name': 'iphone'
+    },
+    {
+      'emoji': '🤡',
+      'entity': '&#129313;' ,
+      'code': ':clown_face:',
+      'description': 'Mocking things.',
+      'name': 'clown-face'
     }
   ]
 }
-
