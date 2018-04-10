@@ -1,11 +1,10 @@
 const gitmojis = require('./gitmojis').gitmojis
 
-const hasGitmoji = ({ commit }) =>
-  gitmojis.some(gitmoji => commit.message.includes(gitmoji.emoji))
+const hasGitmoji = ({ commit }) => gitmojis.some(gitmoji => commit.message.includes(gitmoji.emoji))
 
 const allCommitsHaveGitmojis = commits => commits.every(hasGitmoji)
 
-const checkForEmojis = async (context) => {
+const checkForEmojis = async context => {
   const { github, payload } = context
   const repo = payload.repository.name
   const owner = payload.repository.owner.login

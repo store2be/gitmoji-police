@@ -7,19 +7,17 @@
   "repository": "https://github.com/store2be/gitmoji-police.git",
   "scripts": {
     "start": "probot run ./index.js",
+    "format": "prettier --config=./.prettierrc --write './**/*.js'",
     "test": "jest && standard"
   },
   "dependencies": {
+    "prettier": "^1.11.1",
     "probot": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^21.2.1",
     "localtunnel": "^1.8.2",
     "standard": "^10.0.3"
-  },
-  "engines": {
-    "node": "7.7.0",
-    "npm": "4.0.0"
   },
   "standard": {
     "env": [
