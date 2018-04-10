@@ -1,11 +1,15 @@
 const gitmojis = require('./gitmojis').gitmojis
 
-const hasGitmoji = ({ commit }) =>
-  gitmojis.some(gitmoji => commit.message.includes(gitmoji.emoji))
+const hasGitmoji = ({ commit }) => gitmojis.some(gitmoji => commit.message.includes(gitmoji.emoji))
 
-const allCommitsHaveGitmojis = commits => commits.every(hasGitmoji)
+function isMergeCommit({ commit }) {
+  return commit.message.includes('Merge branch')
+}
 
-const checkForEmojis = async (context) => {
+const allCommitsAreValid = commits =>
+  commits.every(commit => hasGitmoji(commit) || isMergeCommit(commit))
+
+const checkForEmojis = async context => {
   const { github, payload } = context
   const repo = payload.repository.name
   const owner = payload.repository.owner.login
@@ -17,7 +21,7 @@ const checkForEmojis = async (context) => {
     number: payload.pull_request.number,
   })
 
-  const [state, description] = allCommitsHaveGitmojis(response.data)
+  const [state, description] = allCommitsAreValid(response.data)
     ? ['success', 'The Gitmoji Police is satisfied with your commit messages.']
     : ['failure', 'This PR is missing Gitmojis.']
 
