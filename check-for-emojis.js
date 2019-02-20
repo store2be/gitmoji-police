@@ -2,8 +2,10 @@ const gitmojis = require('./gitmojis').gitmojis
 
 const hasGitmoji = ({ commit }) => gitmojis.some(gitmoji => commit.message.includes(gitmoji.emoji))
 
+const mergeCommitRegex = /[Mm]erge/
+
 function isMergeCommit({ commit }) {
-  return commit.message.includes('Merge branch')
+  return mergeCommitRegex.test(commit.message)
 }
 
 const allCommitsAreValid = commits =>
